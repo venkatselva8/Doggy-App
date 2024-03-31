@@ -78,7 +78,7 @@ fun topBar(navController: NavController, name: String) {
             Text(
                 text = name.capitalizeFirstLetter(),
                 modifier = Modifier.padding(PaddingValues(start = 10.dp)),
-                style = MaterialTheme.typography.headlineMedium,
+                style = MaterialTheme.typography.headlineSmall,
                 color = MaterialTheme.colorScheme.onPrimary
             )
         },
