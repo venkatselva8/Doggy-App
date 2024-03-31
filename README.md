@@ -11,7 +11,6 @@ Simple application that shows a list of dog breed and their images.
 2. Coil (Image Loading)
 3. Hilt (Dependency Injection)
 
-APK Location: https://github.com/venkatselva8/Doggy-App/tree/main/media
 
 ### 1. Breed List 
 
