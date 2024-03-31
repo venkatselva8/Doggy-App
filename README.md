@@ -10,6 +10,8 @@ Simple application that shows a list of dog breed and their images.
 1. Retrofit (Network Call)
 2. Coil (Image Loading)
 3. Hilt (Dependency Injection)
+4. Mockk (Unit testing) 
+Test class link - https://github.com/venkatselva8/Doggy-App/tree/main/app/src/test/java/app/android/doggy
 
 
 ### 1. Breed List 
