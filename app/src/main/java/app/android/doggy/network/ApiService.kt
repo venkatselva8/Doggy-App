@@ -1,10 +1,11 @@
 package app.android.doggy.network
 
-import app.android.doggy.data.model.DogBreedImagesResponse
-import app.android.doggy.data.model.DogBreedResponse
+import app.android.doggy.model.DogBreedImagesResponse
+import app.android.doggy.model.DogBreedResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 
+// ApiService: Interface defining API endpoints
 interface ApiService {
 
     @GET("breeds/list/all")

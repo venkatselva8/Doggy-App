@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CardElevation
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -27,9 +26,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.android.doggy.R
-import app.android.doggy.data.model.DogBreed
+import app.android.doggy.model.DogBreed
 import app.android.doggy.util.capitalizeFirstLetter
 
+// ItemDogCard: Composable for displaying a card for a dog breed
 @Composable
 fun ItemDogCard(dog: DogBreed, onItemClicked: (dog: DogBreed) -> Unit) {
     Card(

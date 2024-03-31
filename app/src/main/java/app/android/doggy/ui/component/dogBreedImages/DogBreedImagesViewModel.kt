@@ -10,6 +10,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+// DogBreedImagesViewModel: ViewModel for managing dog breed images
 @HiltViewModel
 class DogBreedImagesViewModel @Inject constructor(
     private val dogBreedsUseCase: DogBreedsUseCase,

@@ -11,6 +11,7 @@ import app.android.doggy.ui.navigation.DoggyNavigation
 import app.android.doggy.ui.theme.DoggyTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+// MainActivity: Entry point of the Android application
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 

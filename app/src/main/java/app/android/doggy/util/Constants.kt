@@ -6,4 +6,6 @@ object Constants {
     const val BASE_URL = "https://dog.ceo/api/"
     const val STATUS_SUCCESS = "success"
     const val BREED_NAME_ROUTE = "/{name}"
+
+    const val ERROR_MESSAGE = "Something went wrong, Try again later"
 }

@@ -9,6 +9,8 @@ import app.android.doggy.ui.component.dogBreedsList.DogBreedsListScreen
 import androidx.navigation.compose.composable
 import app.android.doggy.util.Constants
 
+
+// DoggyNavigation: Defines the navigation for the app using Jetpack Navigation
 @Composable
 fun DoggyNavigation() {
     val navController = rememberNavController()

@@ -14,6 +14,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import app.android.doggy.R
 
+// TopBar: Composable for displaying the top bar
 @Composable
 fun TopBar() {
     Row(

@@ -1,10 +1,11 @@
 package app.android.doggy.usecase
 
-import app.android.doggy.data.model.DogBreed
+import app.android.doggy.model.DogBreed
 import app.android.doggy.network.ApiService
 import app.android.doggy.util.Constants
 import javax.inject.Inject
 
+// DogBreedsUseCase: Use case for fetching dog breeds and images
 class DogBreedsUseCase @Inject constructor(private val apiService: ApiService) {
 
     suspend fun getBreedsList(): List<DogBreed>? {
@@ -14,10 +15,10 @@ class DogBreedsUseCase @Inject constructor(private val apiService: ApiService) {
                 val breedMap = response.message
                 breedMap.keys.map { DogBreed(it) }
             } else {
-                listOf()
+                emptyList()
             }
         } catch (e: Exception) {
-           listOf()
+            emptyList()
         }
     }
 
@@ -27,10 +28,10 @@ class DogBreedsUseCase @Inject constructor(private val apiService: ApiService) {
             if (response.status == Constants.STATUS_SUCCESS) {
                 response.message
             } else {
-                listOf()
+                emptyList()
             }
         } catch (e: Exception) {
-            listOf()
+            emptyList()
         }
     }
 }

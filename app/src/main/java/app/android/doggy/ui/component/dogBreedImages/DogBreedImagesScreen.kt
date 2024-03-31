@@ -1,5 +1,6 @@
 package app.android.doggy.ui.component.dogBreedImages
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -38,13 +39,16 @@ import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import app.android.doggy.R
+import app.android.doggy.util.Constants
 import app.android.doggy.util.capitalizeFirstLetter
 import coil.compose.AsyncImage
 import coil.imageLoader
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
+import app.android.doggy.util.showToast
 
+// DogBreedImagesScreen: Displays images for a selected dog breed
 @Composable
 fun DogBreedImagesScreen(
     navController: NavController,
@@ -61,7 +65,7 @@ fun DogBreedImagesScreen(
             topBar(navController, name)
         },
         content = {
-            ImagesView(dogBreedImagesViewModel, it)
+            ImagesView(LocalContext.current, dogBreedImagesViewModel, it)
         }
     )
 }
@@ -89,14 +93,17 @@ fun topBar(navController: NavController, name: String) {
                     }
             )
         },
-        colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.primary,
-            navigationIconContentColor = MaterialTheme.colorScheme.onPrimary)
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = MaterialTheme.colorScheme.primary,
+            navigationIconContentColor = MaterialTheme.colorScheme.onPrimary
+        )
     )
 }
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun ImagesView(
+    context: Context,
     dogBreedImagesViewModel: DogBreedImagesViewModel,
     paddingValues: PaddingValues
 ) {
@@ -108,6 +115,9 @@ fun ImagesView(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         dogBreedImagesViewModel.uiState.dogBreedsImages?.let { list ->
+            if (list.isEmpty()) {
+                context.showToast(Constants.ERROR_MESSAGE)
+            }
             item {
                 val state = rememberPagerState()
                 HorizontalPager(
@@ -132,8 +142,8 @@ fun ImagesView(
                 DotsIndicator(
                     totalDots = list.size,
                     selectedIndex = state.currentPage,
-                    selectedColor = Color.Blue,
-                    unSelectedColor = Color.Gray
+                    selectedColor = MaterialTheme.colorScheme.secondary,
+                    unSelectedColor = MaterialTheme.colorScheme.onSecondary
                 )
             }
         }

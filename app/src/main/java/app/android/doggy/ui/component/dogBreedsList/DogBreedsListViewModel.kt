@@ -1,6 +1,5 @@
 package app.android.doggy.ui.component.dogBreedsList
 
-import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -11,6 +10,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+// DogBreedsListViewModel: ViewModel for managing dog breeds list
 @HiltViewModel
 class DogBreedsListViewModel @Inject constructor(
     private val dogBreedsUseCase: DogBreedsUseCase
@@ -24,7 +24,6 @@ class DogBreedsListViewModel @Inject constructor(
                 val breeds = dogBreedsUseCase.getBreedsList()
                 DogBreedsListUiState(dogBreeds = breeds, isLoading = false)
             } catch (e: Exception) {
-                Log.v("DogBreedsListViewModel", "getDogBreedsList e$e")
                 DogBreedsListUiState(dogBreeds = emptyList(), isLoading = false)
             }
         }
