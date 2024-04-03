@@ -4,7 +4,7 @@ Simple application that shows a list of dog breed and their images.
 
 **Language:**  Kotlin  
 **UI:** JetPack Compose  
-**Architecture:** MVVM 
+**Architecture:** MVVM - Clean Architecture
 
 **Dependencies used**
 1. Retrofit (Network Call)
