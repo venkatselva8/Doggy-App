@@ -1,11 +1,11 @@
-package app.android.doggy.ui.component.dogBreedsList
+package app.android.doggy.presentation.dogBreedsList
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.android.doggy.usecase.DogBreedsUseCase
+import app.android.doggy.domain.DogBreedsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

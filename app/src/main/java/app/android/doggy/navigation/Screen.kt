@@ -1,4 +1,4 @@
-package app.android.doggy.ui.navigation
+package app.android.doggy.navigation
 
 import app.android.doggy.util.Constants
 

@@ -1,4 +1,4 @@
-package app.android.doggy.ui.theme
+package app.android.doggy.util.theme
 
 import androidx.compose.ui.graphics.Color
 

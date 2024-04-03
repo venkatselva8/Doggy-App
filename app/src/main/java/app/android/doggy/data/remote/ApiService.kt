@@ -1,7 +1,7 @@
-package app.android.doggy.network
+package app.android.doggy.data.remote
 
-import app.android.doggy.model.DogBreedImagesResponse
-import app.android.doggy.model.DogBreedResponse
+import app.android.doggy.data.model.DogBreedImagesResponse
+import app.android.doggy.data.model.DogBreedResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 

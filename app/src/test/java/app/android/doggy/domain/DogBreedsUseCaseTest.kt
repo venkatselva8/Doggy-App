@@ -1,8 +1,8 @@
-package app.android.doggy.usecase
+package app.android.doggy.domain
 
-import app.android.doggy.model.DogBreedImagesResponse
-import app.android.doggy.model.DogBreedResponse
-import app.android.doggy.network.ApiService
+import app.android.doggy.data.model.DogBreedImagesResponse
+import app.android.doggy.data.model.DogBreedResponse
+import app.android.doggy.data.remote.ApiService
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi

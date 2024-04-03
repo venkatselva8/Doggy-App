@@ -1,6 +1,6 @@
 package app.android.doggy.di
 
-import app.android.doggy.network.ApiService
+import app.android.doggy.data.remote.ApiService
 import app.android.doggy.util.Constants
 import dagger.Module
 import dagger.Provides

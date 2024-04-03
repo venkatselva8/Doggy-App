@@ -1,4 +1,4 @@
-package app.android.doggy.ui.component.dogBreedsList
+package app.android.doggy.presentation.dogBreedsList
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

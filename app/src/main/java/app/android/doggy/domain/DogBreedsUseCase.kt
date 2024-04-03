@@ -1,7 +1,7 @@
-package app.android.doggy.usecase
+package app.android.doggy.domain
 
-import app.android.doggy.model.DogBreed
-import app.android.doggy.network.ApiService
+import app.android.doggy.data.model.DogBreed
+import app.android.doggy.data.remote.ApiService
 import app.android.doggy.util.Constants
 import javax.inject.Inject
 

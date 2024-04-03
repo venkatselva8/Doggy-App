@@ -1,4 +1,4 @@
-package app.android.doggy.ui.component.dogBreedImages
+package app.android.doggy.presentation.dogBreedImages
 
 import android.content.Context
 import androidx.compose.foundation.background

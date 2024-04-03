@@ -1,4 +1,4 @@
-package app.android.doggy.model
+package app.android.doggy.data.model
 
 data class DogBreedImagesResponse(
     val status: String,

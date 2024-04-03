@@ -1,11 +1,11 @@
-package app.android.doggy.ui.navigation
+package app.android.doggy.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import app.android.doggy.ui.component.dogBreedImages.DogBreedImagesScreen
-import app.android.doggy.ui.component.dogBreedsList.DogBreedsListScreen
+import app.android.doggy.presentation.dogBreedImages.DogBreedImagesScreen
+import app.android.doggy.presentation.dogBreedsList.DogBreedsListScreen
 import androidx.navigation.compose.composable
 import app.android.doggy.util.Constants
 

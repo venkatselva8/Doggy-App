@@ -1,4 +1,4 @@
-package app.android.doggy.ui.component.dogBreedsList
+package app.android.doggy.presentation.dogBreedsList
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,7 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.android.doggy.R
-import app.android.doggy.model.DogBreed
+import app.android.doggy.data.model.DogBreed
 import app.android.doggy.util.capitalizeFirstLetter
 
 // ItemDogCard: Composable for displaying a card for a dog breed
