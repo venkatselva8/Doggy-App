@@ -90,6 +90,7 @@ dependencies {
     implementation("io.coil-kt:coil-svg:2.2.2")
 
     //Testing
+    testImplementation ("org.mockito:mockito-core:5.8.0")
     testImplementation("io.mockk:mockk:1.12.5")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
     testImplementation("androidx.arch.core:core-testing:2.2.0")
