@@ -26,7 +26,7 @@ import app.android.doggy.presentation.breed.components.ItemBreedCard
 import app.android.doggy.presentation.breed.components.ProgressBarView
 import app.android.doggy.presentation.breed.viewmodels.BreedsViewModel
 
-// DogBreedsListScreen: Displays a list of dog breeds
+// BreedsScreen: Displays a list of dog breeds
 @Composable
 fun BreedsScreen(
     navController: NavHostController,
@@ -51,7 +51,7 @@ fun BreedsScreen(
 
                 breedsStateHolder.value.breeds?.let {
                     if (it.isNotEmpty()) {
-                        LazyColumn(modifier = Modifier.padding(horizontal = 12.dp).testTag("breeds")) {
+                        LazyColumn(modifier = Modifier.padding(horizontal = 12.dp).testTag("breedList")) {
                             items(it) { breed ->
                                 // Display a card for each dog breed
                                 ItemBreedCard(

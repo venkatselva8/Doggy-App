@@ -49,9 +49,9 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
 
-// DogBreedImagesScreen: Displays images for a selected dog breed
+// BreedImagesScreen: Displays images for a selected dog breed
 @Composable
-fun DogBreedImagesScreen(
+fun BreedImagesScreen(
     navController: NavController,
     breedImagesViewModel: BreedImagesViewModel = hiltViewModel(),
     name: String
@@ -72,6 +72,7 @@ fun DogBreedImagesScreen(
 
             breedImagesStateHolder.value.breedImages?.let {
                 if (it.isNotEmpty()) {
+                   // ErrorView(Constants.ERROR_MESSAGE)
                     ImagesView(images = it, paddingValues = padding)
                 } else {
                     ErrorView(Constants.ERROR_MESSAGE)
@@ -102,6 +103,7 @@ fun TopBar(navController: NavController, name: String) {
                     .clickable {
                         navController.popBackStack()
                     }
+                    .testTag("breedImagesBackButton")
             )
         },
         colors = TopAppBarDefaults.topAppBarColors(
@@ -121,7 +123,6 @@ fun ImagesView(
         modifier = Modifier
             .fillMaxSize()
             .padding(paddingValues)
-            .testTag("BreedImages")
             .background(color = MaterialTheme.colorScheme.background),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -138,7 +139,8 @@ fun ImagesView(
                     imageLoader = LocalContext.current.imageLoader,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(300.dp),
+                        .height(300.dp)
+                        .testTag("breedImages"),
                     alignment = Alignment.Center,
                     contentScale = ContentScale.Fit,
                     placeholder = painterResource(id = R.drawable.ic_dog_placeholder),

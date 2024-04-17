@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -31,13 +32,14 @@ import app.android.doggy.core.utils.capitalizeFirstLetter
 
 // ItemBreedCard: Composable for displaying a card for a dog breed
 @Composable
-fun ItemBreedCard(dog: Breed, onItemClicked: (dog: Breed) -> Unit) {
+fun ItemBreedCard(breed: Breed, onItemClicked: (dog: Breed) -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(8.dp)
             .clip(RoundedCornerShape(16.dp))
-            .clickable(onClick = { onItemClicked(dog) }),
+            .testTag("cardBreed")
+            .clickable(onClick = { onItemClicked(breed) }),
         elevation = CardDefaults.cardElevation(4.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.onPrimary,
@@ -56,7 +58,7 @@ fun ItemBreedCard(dog: Breed, onItemClicked: (dog: Breed) -> Unit) {
                     .clip(RoundedCornerShape(16.dp)),
                 painter = painterResource(id = R.drawable.ic_breed),
                 alignment = Alignment.CenterStart,
-                contentDescription = dog.name,
+                contentDescription = breed.name,
                 contentScale = ContentScale.Fit
             )
 
@@ -64,7 +66,7 @@ fun ItemBreedCard(dog: Breed, onItemClicked: (dog: Breed) -> Unit) {
 
             Column(modifier = Modifier.align(Alignment.CenterVertically)) {
                 Text(
-                    text = dog.name.capitalizeFirstLetter(),
+                    text = breed.name.capitalizeFirstLetter(),
                     modifier = Modifier.padding(0.dp, 0.dp, 12.dp, 0.dp),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,

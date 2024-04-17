@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import app.android.doggy.presentation.breed.screens.DogBreedImagesScreen
+import app.android.doggy.presentation.breed.screens.BreedImagesScreen
 import app.android.doggy.presentation.breed.screens.BreedsScreen
 import androidx.navigation.compose.composable
 import app.android.doggy.core.utils.Constants
@@ -20,7 +20,7 @@ fun DoggyNavigation() {
         composable("${Screen.BreedImages.route}${Constants.BREED_NAME_ROUTE}") { backStackEntry ->
             val breedName = backStackEntry.arguments?.getString(Constants.KEY_SELECTED_BREED_NAME)
             breedName?.let {
-                DogBreedImagesScreen(navController = navController, hiltViewModel(), it)
+                BreedImagesScreen(navController = navController, hiltViewModel(), it)
             }
         }
     }
